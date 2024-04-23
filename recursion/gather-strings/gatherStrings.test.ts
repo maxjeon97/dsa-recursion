@@ -19,6 +19,7 @@ it("handles nested objects", function () {
     moreData: {
       lastName: "Testowitz",
     },
+    test: ["a"],
     funFacts: {
       moreStuff: {
         anotherNumber: 100,

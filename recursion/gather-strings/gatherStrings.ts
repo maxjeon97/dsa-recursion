@@ -6,13 +6,13 @@ function gatherStrings(obj: Record<string, any>): string[] {
   for (const key in obj) {
     if (typeof obj[key] === "string") {
       strings.push(obj[key]);
-    } else if (typeof obj[key] === "object" && Object.prototype.toString.call(obj[key]) === '[object Object]') {
+    } else if (typeof obj[key] === "object"
+      && Object.prototype === Object.getPrototypeOf(obj[key])) { // checks that obj[key] is explicitly a POJO
       strings.push(...gatherStrings(obj[key]));
-
     }
   }
+
   return strings;
 }
 
 export { gatherStrings };
-//
