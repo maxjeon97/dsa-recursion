@@ -19,9 +19,4 @@ function binarySearch(arr: number[], val: number, left = 0, right = arr.length -
   }
 }
 
-// const arr = [1, 2, 3, 4, 5, 6] val = 7
-/**
- * is 0 >= 6? no => middle = 3 => arr[3] < 8 => binarySearch(arr, val=8, left=5, right=6)
- */
-
 export { binarySearch };
